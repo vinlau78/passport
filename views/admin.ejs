@@ -1,0 +1,10 @@
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-3">Welcome <%= user.name %></p>
+
+<p><U><b>Current Active Sessions:</b></U></p>
+
+<%  for(var i = 0; i < sessions.length; i++) {  %>
+    SessionID: <%= sessions[i] %><BR>
+    UserID: <BR>
+    <a href="/auth/revoke?id=<%= sessions[i] %>">Revoke Session</a> <BR> <BR>   
+<% } %>
